@@ -3,7 +3,7 @@
   "buildOnSave": false,
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -14,6 +14,7 @@
     "noEmitHelpers": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "allowJs": true,
     "types":[
       "node",
       "jasmine",
@@ -22,6 +23,8 @@
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "src/tests.entry.ts",
+    "**/*.spec.ts"
   ]
 }
