@@ -79,7 +79,12 @@ const prodPlugins = [
   }),
   new UniversalPrerender({
     ngModule: AppModule,
-    documentPath: './dist/index.html',
+    time: true,
+    originUrl: 'http://localhost:8080',
+    baseUrl: '/',
+    requestUrl: '/',
+    preboot: false,
+    documentPath: './index.html',
     document: `<!DOCTYPE html>
     <html>
      <head>
@@ -94,11 +99,6 @@ const prodPlugins = [
        <rio-app></rio-app>
      </body>
     </html>`,
-    time: true,
-    originUrl: 'http://localhost:8080',
-    baseUrl: '/',
-    requestUrl: '/',
-    preboot: false,
   }),
 ];
 
