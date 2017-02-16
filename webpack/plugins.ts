@@ -5,10 +5,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+// For Universal Prerender
+var fs = require('fs');
+var path = require('path');
 require('./universal-hotfix.ts');
-// import { UniversalPrerender } from 'angular2-webpack-prerender';
 const { UniversalPrerender } = require('./prerender');
 import { AppModule } from '../src/app/app.node.module';
+
+const document = fs.readFileSync(
+  path.join(__dirname, '../src/index.html')
+).toString();
 
 const postcss = require('./postcss');
 
@@ -81,24 +88,11 @@ const prodPlugins = [
     ngModule: AppModule,
     time: true,
     originUrl: 'http://localhost:8080',
-    baseUrl: '/',
-    requestUrl: '/',
+    baseUrl: 'http://localhost:8080',
+    requestUrl: 'http://localhost:8080',
     preboot: false,
     documentPath: './index.html',
-    document: `<!DOCTYPE html>
-    <html>
-     <head>
-       <meta charset="utf-8">
-       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       <meta name="description" content="">
-       <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Rangle.io - Angular2 Starter</title>
-       <base href="/">
-     </head>
-     <body>
-       <rio-app></rio-app>
-     </body>
-    </html>`,
+    document: document,
   }),
 ];
 
