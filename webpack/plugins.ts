@@ -13,6 +13,8 @@ require('./universal-hotfix.ts');
 const { UniversalPrerender } = require('./prerender');
 import { AppModule } from '../src/app/app.node.module';
 
+console.log(AppModule.toString());
+
 const document = fs.readFileSync(
   path.join(__dirname, '../src/index.html')
 ).toString();
@@ -86,7 +88,7 @@ const prodPlugins = [
   }),
   new UniversalPrerender({
     ngModule: AppModule,
-    time: true,
+    time: false,
     originUrl: 'http://localhost:8080',
     baseUrl: 'http://localhost:8080',
     requestUrl: 'http://localhost:8080',
