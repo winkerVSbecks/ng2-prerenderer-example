@@ -34,11 +34,7 @@ export interface IUniversalPrerender {
 
 export class UniversalPrerender {
   platformRef: any;
-  constructor(private options: IUniversalPrerender) {
-    // if (this.options.ngModule) {
-    //   this.platformRef.cacheModuleFactory(this.options.ngModule);
-    // }
-  }
+  constructor(private options: IUniversalPrerender) {}
 
   apply(compiler) {
     compiler.plugin('emit', (compilation, callback) => {
@@ -46,28 +42,28 @@ export class UniversalPrerender {
       this.options.document = this.options.document || compilation.assets[this.options.documentPath].source();
 
       const zone = Zone.current.fork({
-        name: 'UNIVERSAL prerender',
+        name: 'UNIVERSAL PRERENDER WEBPACK PLUGIN',
         properties: this.options
       });
 
       zone.run(() => (this.platformRef.serializeModule(
-          this.options.ngModule,
-          this.options,
-        ))
-        .then((html) => {
-          if (typeof html !== 'string' || this.options.cancel) {
-            compilation.assets[this.options.documentPath] = {
-              source: () => this.options.document,
-              size: () => this.options.document.length
-            };
-            return callback();
-          }
+        this.options.ngModule,
+        this.options,
+      ))
+      .then((html) => {
+        if (typeof html !== 'string' || this.options.cancel) {
           compilation.assets[this.options.documentPath] = {
-            source: () => html,
-            size: () => html.length
+            source: () => this.options.document,
+            size: () => this.options.document.length
           };
           return callback();
-        })); // zone.run
+        }
+        compilation.assets[this.options.documentPath] = {
+          source: () => html,
+          size: () => html.length
+        };
+        return callback();
+      })); // zone.run
     }); // compiler.plugin
   } // apply
 }

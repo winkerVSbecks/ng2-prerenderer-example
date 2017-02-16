@@ -90,7 +90,7 @@ const prodPlugins = [
     originUrl: 'http://localhost:8080',
     baseUrl: 'http://localhost:8080',
     requestUrl: 'http://localhost:8080',
-    preboot: false,
+    preboot: true,
     documentPath: './index.html',
     document: document,
   }),

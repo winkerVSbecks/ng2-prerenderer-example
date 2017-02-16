@@ -11,10 +11,6 @@ const isProduction = process.env.NODE_ENV === 'production';
 console.log(path.resolve(__dirname, '../dist'));
 
 module.exports = {
-  // .entry:  {
-  //   express: './src/server-express.ts'
-  // },
-  // target: 'node',
 
   entry: {
     app: './src/main.ts',
@@ -23,10 +19,7 @@ module.exports = {
 
   output: {
     filename: '[name]-bundle.js',
-    // path: './dist',
     path: path.resolve(__dirname, '../dist'),
-    // library: 'universal',
-    // libraryTarget: 'commonjs2',
   },
 
   devtool: isProduction ?
