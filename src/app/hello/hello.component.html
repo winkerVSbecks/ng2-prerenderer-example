@@ -1,1 +1,33 @@
-<p>Hello World!</p>
+<article class="pa3 pa5-ns">
+  <h1 class="f3 f1-m f-headline-l">Hello World!</h1>
+  <p class="measure lh-copy">
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+    no sea takimata <span class="my-red">sanctus</span> est Lorem ipsum dolor sit amet.
+  </p>
+  <p class="measure lh-copy">
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+    no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  </p>
+
+  <div class="flex items-center">
+
+    <button class="f5 no-underline black bg-white bg-animate hover-bg-black hover-white pa3 ba w4 tc b b--black bw2 pointer"
+      (click)="decrement()">
+      Decrement
+    </button>
+
+    <span class="f4 b black items-center pa3 mr4 w4 tc">
+      {{ count }}
+    </span>
+
+    <button class="f5 no-underline black bg-white bg-animate hover-bg-black hover-white pa3 ba mr4 w4 tc b b--black bw2 pointer"
+      (click)="increment()">
+      Increment
+    </button>
+
+  </div>
+</article>

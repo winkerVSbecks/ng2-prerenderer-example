@@ -12,9 +12,10 @@
   },
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack-prerender.config.ts --debug",
+    "build": "cross-env NODE_ENV=production webpack --config prerenderer/webpack-prerenderer.config.js --debug",
+    "prerender": "npm run build && node prerender-dist/index.js && live-server ./prerender-dist --port=3000",
     "profile-build:jit": "npm run clean && cross-env NODE_ENV=production webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json",
-    "clean": "rimraf dist/",
+    "clean": "rimraf dist/ && rimraf prerender-dist",
     "cover": "istanbul report --include=**/coverage/coverage.json text text-summary",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --debug --inline --hot --progress --no-info",
     "lint": "npm run lint-ts && npm run lint-js && npm run lint-css",

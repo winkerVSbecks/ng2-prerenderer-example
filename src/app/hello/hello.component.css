@@ -1,3 +1,3 @@
 @import '../../styles/variables.css';
 
-p { color: var(--red); }
+.my-red { color: var(--red); }
