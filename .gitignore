@@ -37,3 +37,4 @@ src/**/*.js
 
 # Webpack bundle size stats
 stats.json
+prerender-dist

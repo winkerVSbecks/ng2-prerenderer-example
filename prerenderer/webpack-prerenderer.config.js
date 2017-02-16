@@ -1,25 +1,19 @@
 'use strict';
 
-import 'ts-helpers';
-
-import 'angular2-universal-polyfills';
-var path = require('path');
-const loaders = require('./loaders.ts');
-const plugins = require('./plugins.ts');
+const path = require('path');
+const loaders = require('../webpack/loaders');
+const plugins = require('../webpack/plugins');
 const isProduction = process.env.NODE_ENV === 'production';
 
-console.log(path.resolve(__dirname, '../dist'));
-
 module.exports = {
+  target: 'node',
 
-  entry: {
-    app: './src/main.ts',
-    vendor: './src/vendor.ts',
-  },
+  entry: './prerenderer/index.ts',
 
   output: {
-    filename: '[name]-bundle.js',
-    path: path.resolve(__dirname, '../dist'),
+    filename: 'index.js',
+    path: path.resolve(__dirname, '../prerender-dist'),
+    libraryTarget: 'commonjs2',
   },
 
   devtool: isProduction ?
@@ -47,11 +41,8 @@ module.exports = {
 
   module: {
     rules: [
-      loaders.angular,
-      loaders.tslint,
       loaders.ts_JiT,
       loaders.html,
-      loaders.globalCss,
       loaders.localCss,
       loaders.svg,
       loaders.eot,
