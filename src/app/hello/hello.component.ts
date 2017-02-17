@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./hello.component.css'],
 })
 export class HelloComponent {
-  count: number = 1
+  count: number = 12;
 
   increment() {
     this.count++;

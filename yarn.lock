@@ -48,6 +48,10 @@
   dependencies:
     tsickle "^0.2"
 
+"@angularclass/bootloader@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@angularclass/bootloader/-/bootloader-1.0.1.tgz#75de7cf3901b445900a419c2aeca44181d465060"
+
 "@ngtools/webpack@^1.2.8":
   version "1.2.9"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.2.9.tgz#d200cc489f469ea62dbc2c067e3aa8f24e98d5ee"
@@ -1438,7 +1442,7 @@ debug@2.3.3:
   dependencies:
     ms "0.7.2"
 
-debug@2.6.1, debug@^2.1.1, debug@^2.2.0:
+debug@2.6.1, debug@^2.1.1, debug@^2.2.0, debug@^2.3.3:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.1.tgz#79855090ba2c4e3115cc7d8769491d58f0491351"
   dependencies:
@@ -5197,6 +5201,12 @@ safe-buffer@^5.0.1:
 sax@~1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.2.tgz#fd8631a23bc7826bef5d871bdb87378c95647828"
+
+script-ext-html-webpack-plugin@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/script-ext-html-webpack-plugin/-/script-ext-html-webpack-plugin-1.7.1.tgz#ae9c0e26d7767d4aa793c76e3550344ec08b6d10"
+  dependencies:
+    debug "^2.3.3"
 
 select-hose@^2.0.0:
   version "2.0.0"

@@ -2,7 +2,7 @@ import 'ts-helpers';
 import 'angular2-universal-polyfills';
 require('./universal-hotfix.ts');
 
-import { platformUniversalDynamic } from 'angular2-universal';
+import { platformUniversalDynamic } from 'angular2-universal/node';
 import { PrebootOptions } from 'preboot';
 
 var fs = require('fs');

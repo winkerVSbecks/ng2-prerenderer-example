@@ -23,7 +23,7 @@ webpackConfig.plugins = webpackConfig.plugins.concat([
     tsConfigPath: path.join(__dirname, './tsconfig-aot.json'),
     mainPath: path.join(__dirname, 'src', 'main.ts'),
     entryModule: path.join(__dirname, 'src', 'app',
-      'app.browser.module#AppModule'),
+      'app.browser.module#AppBrowserModule'),
   }),
 ]);
 

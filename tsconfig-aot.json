@@ -3,7 +3,7 @@
   "buildOnSave": false,
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -20,14 +20,10 @@
       "core-js"
     ]
   },
-  "angularCompilerOptions": {
-    "entryModule": "app/app.browser.module#AppModule"
-  },
   "exclude": [
     "node_modules",
     "dist",
     "src/tests.entry.ts",
-    "src/app/app.node.module.ts",
     "**/*.spec.ts"
   ]
 }

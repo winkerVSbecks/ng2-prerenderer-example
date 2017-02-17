@@ -2,6 +2,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+// const AotPlugin =  require('@ngtools/webpack').AotPlugin;
 const loaders = require('./webpack/loaders');
 const postcss = require('./webpack/postcss');
 
@@ -20,6 +21,12 @@ const plugins = [
   }),
   new webpack.ContextReplacementPlugin(
     /angular\/core\/(esm\/src|src)\/linker/, __dirname),
+  // new AotPlugin({
+  //   tsConfigPath: path.join(__dirname, './tsconfig-aot.json'),
+  //   mainPath: path.join(__dirname, 'src', 'main.ts'),
+  //   entryModule: path.join(__dirname, 'src', 'app',
+  //     'app.node.module#AppModule'),
+  // }),
 ];
 
 module.exports = {
@@ -58,6 +65,8 @@ module.exports = {
     rules: [
       loaders.ts_JiT,
       loaders.html,
+      { test: /\.css$/, use: 'raw-loader', include: /node_modules/ },
+      loaders.globalCss,
       loaders.localCss,
       loaders.svg,
       loaders.eot,
