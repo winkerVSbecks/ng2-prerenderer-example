@@ -42,7 +42,7 @@ export interface IUniversalPrerender {
 }
 
 const document = fs.readFileSync(
-  path.join(__dirname, '../src/index.html')
+  path.join(__dirname, '../dist/index.html')
 ).toString();
 
 const options: IUniversalPrerender = {
@@ -73,7 +73,7 @@ zone.run(() => (platformRef.serializeModule(
   }
 
   fs.writeFile(
-    path.join(__dirname, '../prerender-dist/index.html'),
+    path.join(__dirname, '../dist/index.html'),
     html,
     (err) => {
     if(err) { return console.log(err); }

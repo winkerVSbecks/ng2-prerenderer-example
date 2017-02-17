@@ -6,12 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { HelloModule } from './hello/hello.module';
 
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'rio-app',
   templateUrl: './app.component.html',
-  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent { }
 

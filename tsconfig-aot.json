@@ -27,6 +27,7 @@
     "node_modules",
     "dist",
     "src/tests.entry.ts",
+    "src/app/app.node.module.ts",
     "**/*.spec.ts"
   ]
 }
