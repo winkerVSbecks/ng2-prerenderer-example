@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import '../../prerenderer/universal-hotfix.ts';
+import '../../prerender/universal-hotfix.ts';
 
 import { UniversalModule, } from 'angular2-universal/browser';
 
