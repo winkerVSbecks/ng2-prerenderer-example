@@ -14,7 +14,7 @@
     "prebuild": "npm run clean",
     "build:prerender": "cross-env NODE_ENV=production webpack --config webpack-prerenderer.config.js --debug",
     "build:aot": "cross-env NODE_ENV=production webpack --config webpack-aot.config.js",
-    "build": "concurrently -r \"npm run build:aot\" \"npm run build:prerender\"",
+    "build": "concurrently -r \"npm run build:jit\" \"npm run build:prerender\"",
     "postbuild": "node prerender-dist/index.js",
     "build:jit": "cross-env NODE_ENV=production webpack",
     "profile-build": "npm run clean && cross-env NODE_ENV=production webpack --config webpack-aot.config.js --profile --json > stats.json && webpack-bundle-analyzer stats.json",

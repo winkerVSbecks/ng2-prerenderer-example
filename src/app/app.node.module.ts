@@ -15,7 +15,6 @@ import { Component } from '@angular/core';
 export class AppComponent { }
 
 
-
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [ AppComponent ],

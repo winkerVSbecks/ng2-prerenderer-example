@@ -21,7 +21,7 @@
     ]
   },
   "angularCompilerOptions": {
-    "entryModule": "app/app.module#AppModule"
+    "entryModule": "app/app.browser.module#AppModule"
   },
   "exclude": [
     "node_modules",
