@@ -29,5 +29,7 @@ if (!__TEST__) {
     });
   };
 
-  _window.bootstrap();
+  setTimeout(() => {
+    _window.bootstrap()
+  }, 2000);
 }
