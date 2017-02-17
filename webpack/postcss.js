@@ -1,6 +1,6 @@
 'use strict';
 
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 const postcssBasePlugins = [
   require('postcss-import')({
