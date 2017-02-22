@@ -1,7 +1,7 @@
 import 'ts-helpers';
 import 'angular2-universal-polyfills';
-require('./universal-hotfix.ts');
-
+import './universal-hotfix';
+import './material-hotfix';
 import { platformUniversalDynamic } from 'angular2-universal/node';
 import { PrebootOptions } from 'preboot';
 

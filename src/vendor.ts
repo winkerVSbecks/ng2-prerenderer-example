@@ -26,4 +26,5 @@ import '@angular/forms';
 import '@angular/http';
 import '@angular/platform-browser';
 import '@angular/router';
+import '@angular/material';
 import 'ramda';

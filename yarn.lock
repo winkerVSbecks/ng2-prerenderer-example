@@ -30,6 +30,10 @@
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/@angular/http/-/http-2.4.3.tgz#d8afca7362efb010600fde02360e01e848579be6"
 
+"@angular/material@2.0.0-beta.1":
+  version "2.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-2.0.0-beta.1.tgz#106a0b79fb2b48a7606a0682c4e5d0bbe03364a0"
+
 "@angular/platform-browser-dynamic@2.4.3":
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.4.3.tgz#d65cc9bc4487e2a86e2c6f6641c711fccfa90c5a"
@@ -2652,6 +2656,13 @@ ieee754@^1.1.4:
 ignore@^3.2.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.2.2.tgz#1c51e1ef53bab6ddc15db4d9ac4ec139eceb3410"
+
+imports-loader@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/imports-loader/-/imports-loader-0.7.0.tgz#468c04de8075941cfab28146c755c24cc1f36ccd"
+  dependencies:
+    loader-utils "^0.2.16"
+    source-map "^0.5.6"
 
 imurmurhash@^0.1.4:
   version "0.1.4"

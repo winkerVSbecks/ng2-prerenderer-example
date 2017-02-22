@@ -59,6 +59,17 @@ module.exports = {
       loaders.ts_JiT,
       loaders.html,
       { test: /\.css$/, use: 'raw-loader', include: /node_modules/ },
+      {
+        test: /@angular(\\|\/)material/,
+        loader: 'imports-loader',
+        options: {
+          window: '>global',
+          'CSS': '>null',
+          navigator: '>{get userAgent(){ return \'Chrome\'; }}',
+        },
+        // use: 'imports-loader?window=>global,CSS=>null,navigator=>' +
+          // '{get userAgent(){ return \'Chrome\'; }}',
+      },
       loaders.globalCss,
       loaders.localCss,
       loaders.svg,
