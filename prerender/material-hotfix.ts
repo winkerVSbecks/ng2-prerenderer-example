@@ -50,30 +50,3 @@ MdButton.prototype._isRippleDisabled = function () {
 import { ObserveContent } from '@angular/material/core/observe-content/observe-content';
 ObserveContent.prototype.ngAfterContentInit = noop;
 // Disable observe content on the server.
-
-// import {getSupportedInputTypes} from '@angular/material/core/platform/features';
-//
-// getSupportedInputTypes = () => new Set([
-//   'button',
-//   'checkbox',
-//   'color',
-//   'date',
-//   'datetime-local',
-//   'email',
-//   'file',
-//   'hidden',
-//   'image',
-//   'month',
-//   'number',
-//   'password',
-//   'radio',
-//   'range',
-//   'reset',
-//   'search',
-//   'submit',
-//   'tel',
-//   'text',
-//   'time',
-//   'url',
-//   'week',
-// ]);
