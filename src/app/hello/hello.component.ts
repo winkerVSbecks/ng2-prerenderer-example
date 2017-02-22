@@ -24,6 +24,11 @@ export class HelloComponent {
 
   selectedOption: string;
 
+  checked = false;
+  indeterminate = false;
+  align = 'start';
+  disabled = false;
+
   constructor(
     public dialog: MdDialog,
     public snackBar: MdSnackBar,

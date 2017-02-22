@@ -67,6 +67,77 @@
   </div>
 </article>
 
+<form class="example-form pa3 pa5-ns mb5">
+  <md-input-container class="example-full-width">
+    <input md-input placeholder="Company (disabled)" disabled value="Google">
+  </md-input-container>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="example-full-width">
+      <input md-input placeholder="First name">
+    </md-input-container></td>
+    <td><md-input-container class="example-full-width">
+      <input md-input placeholder="Long Last Name That Will Be Truncated">
+    </md-input-container></td>
+  </tr></table>
+
+  <p>
+    <md-input-container class="example-full-width">
+      <textarea md-input placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+    </md-input-container>
+    <md-input-container class="example-full-width">
+      <textarea md-input placeholder="Address 2"></textarea>
+    </md-input-container>
+  </p>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="example-full-width">
+      <input md-input placeholder="City">
+    </md-input-container></td>
+    <td><md-input-container class="example-full-width">
+      <input md-input placeholder="State">
+    </md-input-container></td>
+    <td><md-input-container class="example-full-width">
+      <input md-input #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+      <md-hint align="end">{{postalCode?.value?.length}} / 5</md-hint>
+    </md-input-container></td>
+  </tr></table>
+</form>
+
+<md-button-toggle-group class="pa3 pa5-ns mb3"
+  #group="mdButtonToggleGroup">
+  <md-button-toggle value="left">
+    format_align_left
+  </md-button-toggle>
+  <md-button-toggle value="center">
+    format_align_center
+  </md-button-toggle>
+  <md-button-toggle value="right">
+    format_align_right
+  </md-button-toggle>
+  <md-button-toggle value="justify" disabled>
+    format_align_justify
+  </md-button-toggle>
+</md-button-toggle-group>
+
+<div class="example-selected-value mb5">Selected value: {{group.value}}</div>
+
+
+<div class="pa3 pa5-ns mb5">
+  <h2 class="example-h2">Result</h2>
+
+  <section class="example-section">
+    <md-checkbox
+        class="example-margin"
+        [checked]="checked"
+        [indeterminate]="indeterminate"
+        [align]="align"
+        [disabled]="disabled">
+      I'm a checkbox
+    </md-checkbox>
+  </section>
+</div>
+
 <md-sidenav-container class="example-sidenav-fab-container">
   <md-sidenav #sidenav mode="side" opened="true">
     <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">

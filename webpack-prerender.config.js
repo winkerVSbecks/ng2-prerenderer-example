@@ -66,9 +66,8 @@ module.exports = {
           window: '>global',
           'CSS': '>null',
           navigator: '>{get userAgent(){ return \'Chrome\'; }}',
+          document: '>global.document',
         },
-        // use: 'imports-loader?window=>global,CSS=>null,navigator=>' +
-          // '{get userAgent(){ return \'Chrome\'; }}',
       },
       loaders.globalCss,
       loaders.localCss,

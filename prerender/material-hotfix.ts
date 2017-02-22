@@ -1,8 +1,14 @@
 import { NodeDomRootRenderer, NodeDomRenderer } from 'angular2-universal/node';
 
 const noop = function() {};
-global['createElement'] = noop;
-global['activeElement'] = null;
+global['document'] = {
+  createElement() {
+    return {
+      setAttribute: function(type) { this.type = type; },
+      type: ''
+    };
+  },
+};
 
 function renderComponentFix(componentProto: any) {
   return new NodeDomRenderer(this, componentProto, this._animationDriver);
@@ -44,3 +50,30 @@ MdButton.prototype._isRippleDisabled = function () {
 import { ObserveContent } from '@angular/material/core/observe-content/observe-content';
 ObserveContent.prototype.ngAfterContentInit = noop;
 // Disable observe content on the server.
+
+// import {getSupportedInputTypes} from '@angular/material/core/platform/features';
+//
+// getSupportedInputTypes = () => new Set([
+//   'button',
+//   'checkbox',
+//   'color',
+//   'date',
+//   'datetime-local',
+//   'email',
+//   'file',
+//   'hidden',
+//   'image',
+//   'month',
+//   'number',
+//   'password',
+//   'radio',
+//   'range',
+//   'reset',
+//   'search',
+//   'submit',
+//   'tel',
+//   'text',
+//   'time',
+//   'url',
+//   'week',
+// ]);

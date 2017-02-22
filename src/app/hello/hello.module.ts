@@ -10,10 +10,9 @@ import { MdDialogModule } from '@angular/material/dialog';
 import { MdSnackBarModule } from '@angular/material/snack-bar';
 import { MdSidenavModule } from '@angular/material/sidenav';
 import { MdProgressBarModule } from '@angular/material/progress-bar';
-// checkbox
-// input
-// md-button-toggle-group
-// md-input-container
+import { MdInputModule } from '@angular/material/input';
+import { MdCheckboxModule } from '@angular/material/checkbox';
+import { MdButtonToggleModule } from '@angular/material/button-toggle';
 
 import { LiveAnnouncer } from '@angular/material/core/a11y/live-announcer';
 
@@ -28,6 +27,9 @@ import { FakeLiveAnnouncer } from './bs';
     MdSnackBarModule.forRoot(),
     MdSidenavModule.forRoot(),
     MdProgressBarModule.forRoot(),
+    MdInputModule.forRoot(),
+    MdCheckboxModule.forRoot(),
+    MdButtonToggleModule.forRoot(),
   ],
   declarations: [
     HelloComponent,
