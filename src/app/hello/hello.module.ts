@@ -16,7 +16,10 @@ import { MdButtonToggleModule } from '@angular/material/button-toggle';
 
 import { LiveAnnouncer } from '@angular/material/core/a11y/live-announcer';
 
-import { FakeLiveAnnouncer } from './bs';
+export class FakeLiveAnnouncer {
+  announce() {
+  }
+}
 
 @NgModule({
   imports: [
